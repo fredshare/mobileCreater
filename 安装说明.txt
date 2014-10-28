@@ -1,0 +1,24 @@
+1、新建数据库和数据表，sql语句在sql.txt里面。
+2、建好后在mobile\application\config\database.php 里配置好数据库信息，如下：
+$db['mobile']['hostname'] = 'localhost';
+$db['mobile']['username'] = 'root';
+$db['mobile']['password'] = '';
+$db['mobile']['database'] = 'mobile';
+$db['mobile']['dbdriver'] = 'mysql';
+$db['mobile']['dbprefix'] = '';
+$db['mobile']['pconnect'] = TRUE;
+$db['mobile']['db_debug'] = TRUE;
+$db['mobile']['cache_on'] = FALSE;
+$db['mobile']['cachedir'] = '';
+$db['mobile']['char_set'] = 'utf8';
+$db['mobile']['dbcollat'] = 'utf8_general_ci';
+$db['mobile']['swap_pre'] = '';
+$db['mobile']['autoinit'] = TRUE;
+$db['mobile']['stricton'] = FALSE;
+3、访问路径为：localhost/mobile/index.php/mobile
+4、在活动管理和模版管理里分别新建测试数据
+5、保存数据路径和发布路径等都得相应的更改
+6、组件数据保留了公共组件，和我们虚拟的组件都以删除，可按照开发文档开发组件
+7、活动加锁功能暂时注释，涉及到session，可自行添加
+9、组件中的php属性是指自动生成php接口，可由前台调用（如果没有可忽略）
+8、有问题可联系fredshare

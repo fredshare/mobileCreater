@@ -1,0 +1,43 @@
+CREATE DATABASE IF NOT EXISTS `mobile`; 
+
+--
+-- 表的结构 `mobile_mall_config`
+--
+CREATE TABLE IF NOT EXISTS `mobile_mall_config` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `uid` varchar(256) NOT NULL,
+  `mallid` varchar(256) NOT NULL,
+  `turl` varchar(256) NOT NULL,
+  `status` int(255) NOT NULL DEFAULT '1' COMMENT '为0表示删除，1表示在dev下，2表示在idc下',
+  `modtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data` longtext NOT NULL,
+  `html` longtext NOT NULL,
+  `js` text,
+  `css` text,
+  `addtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `business` int(10) NOT NULL DEFAULT '1',
+  `templateid` int(255) NOT NULL DEFAULT '1',
+  `ontime` datetime NOT NULL DEFAULT '2013-06-28 00:00:00',
+  `offtime` datetime NOT NULL DEFAULT '2013-06-28 00:00:00',
+  `locker` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `id_2` (`id`),
+  KEY `id_3` (`id`),
+  KEY `id_4` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='无线卖场配置数据表' AUTO_INCREMENT=20120 ;
+
+--
+-- 表的结构 `mobile_mall_template`
+--
+CREATE TABLE IF NOT EXISTS `mobile_mall_template` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET gbk NOT NULL,
+  `businessid` int(10) NOT NULL,
+  `data` longtext CHARACTER SET gbk NOT NULL,
+  `addtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `uid` varchar(255) CHARACTER SET gbk NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='无线卖场模版表' AUTO_INCREMENT=15 ;
